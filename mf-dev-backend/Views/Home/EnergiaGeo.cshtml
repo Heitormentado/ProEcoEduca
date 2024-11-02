@@ -1,0 +1,32 @@
+﻿@model mf_dev_backend.Views.Home.EnergiaGeoModel
+@{
+    ViewData["Title"] = "EnergiaGeo";
+}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/energias.css" />
+</head>
+
+
+<body>
+    <main>
+        <article>
+        <h1 class="display-5">
+            Conheça as fontes Renováveis
+        </h1>
+ 
+        <p>
+            Muitas informações sobre a energia Geotérmica
+        </p>
+        <img src="~/NovaPasta1/geotermica.jpg" class="card-img-top" alt="...">
+       
+        </article>
+
+        <a asp-controller="Home" asp-action="Index">Voltar</a>
+    </main>
+</body>

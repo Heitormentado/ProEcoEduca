@@ -1,0 +1,15 @@
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace mf_dev_backend.Models
+{
+    public class AppDbContext : DbContext
+    {
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
+
+        public DbSet<Veiculo> Veiculos { get; set; }
+
+        public DbSet<Usuario> Usuarios { get; set; }
+
+        public DbSet<Comentario> Comentarios { get; set; }
+    }
+}

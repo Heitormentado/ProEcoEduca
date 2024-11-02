@@ -1,0 +1,31 @@
+﻿@model mf_dev_backend.Views.Home.EolicaModel
+@{
+    ViewData["Title"] = "Eolica";
+}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/energias.css" />
+</head>
+
+
+<body>
+    <main>
+        <article>
+        <h1 class="display-5">
+            Energia Eólica
+        </h1>
+        <img src="~/NovaPasta1/eolico.jpg" class="card-img-top" alt="turbinas eólicas">
+        <p>
+            Muitas informações sobre a energia Eólica
+        </p>
+        </article>
+
+        <a asp-controller="Home" asp-action="Index">Voltar</a>
+    </main>
+</body>
+

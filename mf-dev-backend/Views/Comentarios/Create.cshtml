@@ -1,0 +1,15 @@
+﻿
+
+@model mf_dev_backend.Models.Comentario
+
+<h3>Adicionar Comentário</h3>
+
+<form asp-action="Create" method="post">
+    <div>
+        <label for="Texto">Comentário:</label>
+        <textarea name="Texto" required></textarea>
+    </div>
+    <button type="submit">Enviar</button>
+</form>
+
+<a asp-action="Index">Voltar para a lista de comentários</a>

@@ -1,0 +1,166 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<style>
+    h1, h2, h3 {
+        color: white;
+    }
+
+    #cabecalho {
+
+        background-image: linear-gradient(to bottom, #2fa866, #063d1e);
+        text-align: center;
+        padding: 40px;
+        margin-top: -17px;
+    }
+
+    .carousel-container {
+        display: flex;
+        justify-content: center;
+        /*max-width: 900px; /* Tamanho máximo do carrossel */
+        margin: auto; /* Centraliza horizontalmente */
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+
+    .carousel-inner img {
+        width: 100%; /* Imagem ocupa 100% do espaço do carrossel */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+
+    #cards {
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        margin: auto; /* Centraliza horizontalmente */
+        background-color: #c5ebd6;
+    }
+
+    h3 {
+        background-image: linear-gradient(to bottom, #2fa866, #063d1e);
+        padding-bottom: 15px;
+        padding-top: 25px;
+        margin-bottom: 0px;
+    }
+
+    body {
+        background-color: #c5ebd6;
+    }
+
+    .text-center {
+        background-color: white;
+    }
+
+</style>
+<header id="cabecalho">
+        <h1 class="display-1">EcoEduca</h1>
+        <h2 class="display-6">Seu portal de educação sobre Fontes Renováveis</h2>
+</header>
+<div class="text-center">
+    <div class="carousel-container">
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="~/NovaPasta1/solar1.jpg" alt="painéis solares">
+                </div>
+                <div class="carousel-item">
+                    <img src="~/NovaPasta1/eolico1.jpg" alt="turbinas eólicas">
+                </div>
+                <div class="carousel-item">
+                    <img src="~/NovaPasta1/hidreletrica1.jpg" alt="usina hidrelétrica">
+                </div>
+                <div class="carousel-item">
+                    <img src="~/NovaPasta1/geotermica1.jpg" alt="usina geotérmica">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    @if (User.Identity.IsAuthenticated)
+    {
+    <h3 class="display-5">
+        Conheça as fontes Renováveis
+    </h3>
+    <div id="cards">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card">
+                    <img src="~/NovaPasta1/geotermica.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Geotérmica</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <a asp-controller="Home" asp-action="EnergiaGeo">Saiba mais</a>
+                    </div>
+                </div>
+            </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="~/NovaPasta1/solar.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Solar</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <a asp-controller="Home" asp-action="Solar">Saiba mais</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="~/NovaPasta1/eolico2.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Eólica</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <a asp-controller="Home" asp-action="Eolica">Saiba mais</a>
+                        </div>
+                    </div>
+                </div>
+            <div class="col">
+                <div class="card">
+                    <img src="~/NovaPasta1/biocombustivel.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Biocombustíveis</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <a asp-controller="Home" asp-action="Biocombustivel">Saiba mais</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="~/NovaPasta1/hidreletrica.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Hidroelétrica</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                            <a asp-controller="Home" asp-action="Hidreletrica">Saiba mais</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="~/NovaPasta1/hidrogenio.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Hidrogênio Verde</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <a asp-controller="Home" asp-action="HidrogenioVerde">Saiba mais</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    }
+    @if (!User.Identity.IsAuthenticated)
+    {
+        <p class="display-6">
+            Quer ter acesso a todo o nosso conteúdo?
+        </p>
+        <p>
+            <button class="btn btn-primary" onclick="location.href='@Url.Action("Login", "Usuarios")'">LOGIN</button>
+        </p>
+    }
+</div>
